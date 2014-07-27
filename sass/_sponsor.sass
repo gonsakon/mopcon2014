@@ -1,0 +1,73 @@
+$sponsor-class: ⃠-black-box
+%sponsor-content
+	+leader(3)
+	+pie-clearfix
+	img
+		display: block
+	section
+		//background-color: rgba(white, .1)
+		display: inline-block
+		+box-sizing(border-box)
+		+at-breakpoint($pad)
+
+			padding: rhythm(.5)
+			vertical-align: top
+			width: columns(6, 12)
+			+trailer(1)
+
+
+#map-canvas
+	height: 360px
+	+trailer(1)
+.#{$sponsor-class}
+	h3
+		color: $white
+	ol 
+		list-style: decimal outside
+		margin-left: 40px
+		li 
+			display: list-item
+	
+	h2
+		+adjust-font-size-to($font-size-xl)
+		color: $white
+	.article
+		// @extend %bg
+		padding: rhythm(.5)
+
+
+	.sponsor-platinum
+		@extend %sponsor-content
+		img
+			height: $base-line-height*8
+
+	.sponsor-gold
+		@extend %sponsor-content
+		img
+			height: $base-line-height*6
+
+	.sponsor-silver
+		@extend %sponsor-content
+		img
+			height: $base-line-height*4
+		section
+			+at-breakpoint($pc)
+				width: columns(4, 12)
+
+	.sponsor-bronze
+		@extend %sponsor-content
+		img
+			height: $base-line-height*3
+		section
+			+at-breakpoint($pc)
+				width: columns(3, 12)
+
+	.sponsor-media
+		@extend %sponsor-content
+		img
+			height: $base-line-height*2
+		section
+			+at-breakpoint($pc)
+				padding: rhythm(.5)
+				width: columns(2, 12)
+

@@ -1,0 +1,201 @@
+	
+.talk-☴
+	margin-bottom: 1.5em
+	figure
+		text-align: center
+		margin: 0 auto 
+		width: $base-line-height *4
+		height: $base-line-height *4
+		img 
+			height: $base-line-height *4 - 10px
+			padding-top: 5px
+			display: block
+			-webkit-clip-path: polygon(25% 0 ,75% 0,100% 50%, 75% 100% , 25% 100%, 0 50% )
+			-moz-clip-path: polygon(25% 0 ,75% 0,100% 50%, 75% 100% , 25% 100%, 0 50% )
+			-ms-clip-path: polygon(25% 0 ,75% 0,100% 50%, 75% 100% , 25% 100%, 0 50% )
+			clip-path: polygon(25% 0 ,75% 0,100% 50%, 75% 100% , 25% 100%, 0 50% )
+
+	h2
+		+adjust-font-size-to($base-font-size)
+		color: #fff
+		a 
+			color: #fff
+			text-decoration: underline
+	h3
+		+adjust-font-size-to($base-font-size)
+		color: #fff
+		text-align: center
+		color: $orange
+	.row
+		+pie-clearfix
+		overflow: hidden
+		+at-breakpoint($pad)
+	.talker
+		.detail
+			position: relative
+			// display: none
+			display: none
+			+leader(1)
+			background: $white
+			+border-radius(5px)
+			padding-left: 1em
+			padding-right:  1em
+			+padding-leader(1)
+			&:before
+				display: block
+				content: ''
+				height: $base-line-height
+				position: absolute
+				+triangle(20px,$white,top)
+				top: -20px
+				left: 50%
+				margin-left: -10px
+			+at-breakpoint($pad)
+				display: none !important
+			p 
+				text-align: left
+			.title
+				color: #FD5259
+				font-weight: bold
+				font-size: 20px
+				margin-bottom: 1em
+				padding: 0 0 .2em 0
+				border-bottom: 1px solid #FD5259
+
+			.introduce
+				+padding-trailer(1)
+				color: $common-dark
+			
+	.detail_outbox
+		display: none 
+		+trailer(1)
+		+at-breakpoint($pad)
+			display: block 
+			-webkit-animation: 1s slidein
+			position: relative
+			
+			+leader(1)
+			background: $white
+			+border-radius(5px)
+			padding-left: 1em
+			padding-right:  1em
+			+padding-leader(1)
+			&:before
+				display: block
+				content: ''
+				height: $base-line-height
+				position: absolute
+				+triangle(20px,$white,top)
+				top: -20px
+				margin-left: -10px
+			&.arrow-area-1:before
+				left: 15%
+			&.arrow-area-2:before,&.arrow-area-all:before
+				left: 50%
+			&.arrow-area-3:before
+				right: 15%
+
+			p 
+				text-align: left
+			.title
+				color: #FD5259
+				font-weight: bold
+				font-size: 20px
+				margin-bottom: 1em
+				padding: 0 0 .2em 0
+				border-bottom: 1px solid #FD5259
+			.introduce
+				+padding-trailer(1)
+				color: $common-dark
+	.talker .detail,.detail_outbox
+		footer 
+			+padding-trailer(1)
+			text-align: center
+			.btn
+				color: $white
+	.area-all a
+		h2 
+			color: #fff
+	.area-1,.area-2,.area-3,.area-all
+		+trailer(1)
+		+box-sizing(border-box)
+	.area-1,.area-2,.area-3
+		+at-breakpoint($pad)
+			padding: 0 2em
+			padding-bottom: 500em
+			margin-bottom: -500em
+
+	.area-all,.area-1,.area-2,.area-3
+		display: block
+		+pie-clearfix
+		 
+		text-decoration: none
+		transition: all 0.3s	
+	.notice
+		display: block
+		+pie-clearfix
+		 
+		text-decoration: none
+		+trailer(1)
+		background: $text-color
+		color: $dark
+	.area-all
+		.talker
+			text-align: center
+		.detail
+	.area-1,.area-2
+		+at-breakpoint($pad)
+			+span-columns(3)
+	.area-3
+		+at-breakpoint($pad)
+			+span-columns(3 omega)
+	time 
+		display: block 
+		+adjust-font-size-to(16px,1)
+		+leader(1)
+		+trailer(1)
+		color: $white		
+		padding-left: 0.5em
+		border-left: 5px solid $darkgreen
+	.place 
+		+adjust-font-size-to(13px)
+		margin-bottom: $base-line-height
+		+at-breakpoint($pad)
+			margin: 0
+		.btn 
+			color: #fff
+		.area-time
+			color: #000
+	
+@-webkit-keyframes slidein 
+	from 
+		opacity: 0
+	to 
+		opacity: 1
+.close
+	background: blue 
+	color: #fff
+	padding: 20px
+	display: block
+	text-align: center
+	text-decoration: none 
+	font-size: 30px
+.jq-close 
+	height: 44px
+	width: 44px
+	line-height: 44px
+	background: red
+	display: block
+	position: absolute
+	+border-radius(0 5px 0 0 )
+	top: 10px
+	right: 16px
+	text-align: center
+	i 
+		color: #fff 
+		display: block 
+		font-size: 30px
+		margin: .25em 0 0 0
+	&:hover i , &:active i
+		color: 	#0f222b
+	

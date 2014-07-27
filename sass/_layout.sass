@@ -1,0 +1,47 @@
+
+html 
+	background: $color-bg
+	background: image-url("bg-2014.png") $color-bg
+	//background: url("http://hitcon.org/2014/images/bg-grid.png?1400914833")
+.container
+	overflow: hidden
+	//background: url(../images/bg.png)
+body
+	// background: url(../images/bg.png)
+	//overflow: hidden
+.container 
+	+container()
+
+	margin: 0 auto
+	//+susy-grid-background()
+	+at-breakpoint($pad)
+		//+set-container-width
+		//+susy-grid-background()
+	+at-breakpoint($pc)
+		//+set-container-width
+		//+susy-grid-background()
+.index
+	display: block
+	+at-breakpoint($pc)
+		h1
+			display: none
+		img 
+.content
+	+span-columns($total-columns omega)
+	+transition(all,.3s)
+	.open & 
+		margin-right: - space($side)
+	+at-breakpoint($pad)
+		.open & 
+			margin-right: - space($side)
+
+
+
+.mobile-only
+	display: block
+	+at-breakpoint($pad)
+		display: none
+.desktop-only
+	display: none
+	+at-breakpoint($pad)
+		display: block

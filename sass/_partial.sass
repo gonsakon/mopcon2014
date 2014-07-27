@@ -1,0 +1,131 @@
+@import partial/button
+%line-element
+	height: $base-line-height
+	//background: image-url("line-element.png") repeat-x
+	@media #{$retina-display-media}
+		//background: image-url("line-element2x.png") repeat-x
+		+background-size(auto image-height("line-element.png"))
+#svg
+	margin: 0 auto
+	text-align: center
+	+trailer(2)
+.page-title:before, .footer-line
+	height: 24px
+	background: url("../images/line-element.png?1401507867") repeat-x
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
+	.page-title:before, .footer-line
+		background: url("../images/line-element2x.png?1401508772") repeat-x
+		-moz-background-size: auto 26px
+		-o-background-size: auto 26px
+		-webkit-background-size: auto 26px
+		background-size: auto 26px
+
+.page-title
+	position: relative
+	font-size: 1.5em
+	line-height: 2em
+	color: #ffd74d
+	margin-bottom: 3em
+
+.page-title:before
+	content: ""
+	position: absolute
+	bottom: -24px
+	left: 0
+	right: 0
+
+.page-title h1
+	margin-bottom: 24px
+	text-align: center
+
+@media (min-width: 960px)
+	.page-title h1
+		margin: 0
+		background: none
+		color: #ffd74d
+		text-align: left
+
+.footer-line
+	-moz-transform: rotate(180deg)
+	-ms-transform: rotate(180deg)
+	-webkit-transform: rotate(180deg)
+	transform: rotate(180deg)
+	clear: both
+
+.showmenu
+	cursor: pointer
+	display: block 
+	position: absolute
+	top: 0
+	font-size: 1.5em
+	line-height: 1.5
+	//width: 50px
+	//margin: 0.5em 0 0 .5em
+	//height: $base-line-height * 2
+	//width: $base-font-size * 3
+	//+adjust-font-size-to($font-big)
+	//line-height: 1
+
+	&:hover .line , &:active .line 
+		+box-shadow(0px 0px 15px 0px #FFF)
+	.line 
+		height: 3px
+		width: 70%
+		margin: 3px auto 6px auto
+		background: $white
+	+at-breakpoint($pc)
+		display: none
+		
+.scroll-top
+	display: none
+	color: white
+	position: fixed
+	font-size: 44px
+	right: 16px
+	bottom: 16px
+	background-color: rgba(black, .7)
+	+border-radius(3px)
+	opacity: .4
+	+transition(opacity .3s)
+	&:hover
+		opacity: 1
+.sns a
+	display: inline-block
+	-moz-transition: color 0.3s, -moz-transform 0.3s
+	-o-transition: color 0.3s, -o-transform 0.3s
+	-webkit-transition: color 0.3s, -webkit-transform 0.3s
+	transition: color 0.3s ease 0s, transform 0.3s ease 0s
+	-moz-transform: rotate(0)
+	-ms-transform: rotate(0)
+	-webkit-transform: rotate(0)
+	transform: rotate(0deg)
+	color: #56CAB6
+
+.sns a:hover
+	-moz-transform: rotate(-10deg)
+	-ms-transform: rotate(-10deg)
+	-webkit-transform: rotate(-10deg)
+	transform: rotate(-10deg)
+	color: #1d7c6b
+
+.pc-banner
+	display: none
+	+at-breakpoint($pad)
+		display: block
+		margin-bottom: 1em
+.mobile-banner 
+	time
+		+adjust-font-size-to($font-size-xxl)
+		display: block
+		text-align: center
+		+leader(.5)
+		+trailer(.5)
+	+at-breakpoint($pad)
+		display: none
+.mobile-banner-img
+	+adjust-font-size-to(16px)
+	
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
+
+

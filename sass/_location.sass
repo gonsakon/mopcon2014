@@ -1,0 +1,29 @@
+#map-canvas
+	height: 360px
+	+trailer(1)
+.location-➫
+	address
+		display: block
+		+trailer(1)
+		color: $hot-color
+		+adjust-font-size-to($base-font-size)
+	.transportation
+		p 
+			padding-left: 1em
+		+at-breakpoint($pc)
+			+trailer(2)
+			+span-columns(6)
+			&:last-child
+				+span-columns(6 omega)
+
+
+	h2
+		display: none
+
+	h3
+		color: $white
+	ol 
+		list-style: decimal outside
+		margin-left: 40px
+		li 
+			display: list-item

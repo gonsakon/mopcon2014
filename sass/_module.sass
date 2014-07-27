@@ -1,0 +1,93 @@
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+=animation($content)
+	-webkit-animation: $content
+	-moz-animation: $content
+	-o-animation: $content
+	animation: $content
+
+=replace-text-with-svg($image-name) 
+	@include replace-text-with-dimensions("#{$image-name}.png")
+	background-image: none, image-url("#{$image-name}.svg")
+	@include background-size(cover)
+
+=triangle($size, $color, $align,$type:1)  
+	height: 0  
+	width: 0  
+	@if $align == top   
+		border-bottom: ($size*$type) solid $color  
+		border-left: ($size/2) solid transparent  
+		border-right: ($size/2) solid transparent  
+	@else if $align == right   
+		border-left: ($size*$type) solid $color  
+		border-top: ($size/2) solid transparent  
+		border-bottom: ($size/2) solid transparent  
+	@else if $align == bottom   
+		border-top: ($size*$type) solid $color  
+		border-left: ($size/2) solid transparent  
+		border-right: ($size/2) solid transparent  
+	@else if $align == left   
+		border-right: ($size*$type) solid $color  
+		border-top: ($size/2) solid transparent  
+		border-bottom: ($size/2) solid transparent  
+	@else if $align == right-top  
+		border-right: $size solid $color  
+		border-bottom: $size solid transparent  
+	@else if $align == left-top  
+		border-left: $size solid $color  
+		border-bottom: $size solid transparent  
+	@else if $align == right-bottom  
+		border-right: $size solid $color  
+		border-top: $size solid transparent  
+	@else if $align == left-bottom  
+		border-left: $size solid $color  
+		border-top: $size solid transparent    
+
+
+
++keyframes(outWaveIn)
+	to
+		stroke-width: 3px
+		stroke-dasharray: 40000
+
++keyframes(outWaveOut)
+	from
+		stroke-width: 1px
+		stroke-dasharray: 400
+	to
+		stroke: rgba(black, .6)
+		stroke-width: 1px
+		stroke-dasharray: 20 
+
+%bg 
+	background: rgba(black,.2)
+	+border-radius(5px)
+.md-text
+	p
+		+trailer(1)
+	ul
+		list-style: disc
+		padding-left: 1em
+		+trailer(1)
+
+
+
+// $icon-spacing: 1px
+// $icon-sprite-dimensions: true
+// @import "icon/*.png"
+// @include all-icon-sprites
+
+// $icon2x-spacing: 1px
+// $icon2x-sprite-dimensions: true
+// @import "icon2x/*.png"
+// @include all-icon2x-sprites
+
+// @include all-retina-sprites($icon-sprites, $icon2x-sprites)

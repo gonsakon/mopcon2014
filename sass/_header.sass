@@ -1,0 +1,62 @@
+// .menu
+// 	height: 100%
+// 	+span-columns($side)
+// 	margin-left: -100%
+// 	+transition(all,.3s)
+// 	+box-sizing(border-box)
+// 	border-bottom: 1px solid $white
+// 	.open &
+// 		margin-left: 0%
+// 	li 
+// 		a 
+// 			color: $white
+// 			padding: 0px $base-font-size
+// 			display: block
+// 			+adjust-font-size-to($base-font-size)
+// 			line-height: $base-line-height * 2
+// 			+transition(all,.5s)
+			
+// 			&:hover,&:active
+// 				background: $dark-blue
+// 	+at-breakpoint($pad)  
+// 		+span-columns($side)
+// 	+at-breakpoint($pc) 
+// 		+span-columns(12 omega)
+// 		+pie-clearfix
+// 		margin: 0
+		
+// 		+border-radius(0 0 5px 5px)
+// 		ul
+// 			float: right
+// 		li 
+// 			float: left
+
+
+.logo
+	display: none
+	background: image-url("2014-logo.png")
+	width: image-width("2014-logo.png")
+	height: image-height("2014-logo.png")
+	float: left
+	+at-breakpoint($pc)
+		display: block
+	@media #{$retina-display-media}
+		background: image-url("2014-logo2x.png")
+		+background-size(image-width("2014-logo.png") auto)
+	// color: $white
+	// display: block
+	// text-align: right
+	// +padding-leader(0.5)
+	// +padding-trailer(0.5) 
+	// +adjust-font-size-to(18px)
+	// +transition(all,.5s)
+	// &:hover,&:active
+	// 	background: $dark-blue
+	// +at-breakpoint($pad)
+	// 	+adjust-font-size-to(26px)
+	// 	padding: 0
+	// +at-breakpoint($pc)
+	// 	+border-radius(0 0 0px 5px)
+	// 	float: left
+	// 	margin-right: $base-font-size
+	// 	padding: 0 $base-font-size

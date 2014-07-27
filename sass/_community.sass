@@ -1,0 +1,157 @@
+$group-class: kh-❤
+// %speaker-content
+// 	+leader(3)
+// 	+pie-clearfix
+// 	img
+// 		display: block
+// 	section
+// 		display: inline-block
+// 		+box-sizing(border-box)
+// 		+at-breakpoint($pad)
+// 			padding: rhythm(1)
+// 			vertical-align: top
+// 			width: columns(6, 12)
+// 			+trailer(1)
+
+.#{$group-class}
+	$padding: 2em
+	$svg-height: $base-line-height*4
+	$svg-width: 113px
+	.group-list
+		text-align: center
+		+pie-clearfix
+
+		a
+			position: relative
+			display: block
+			height: $svg-height
+			width: $svg-width
+			float: left
+			
+			+trailer(.5)
+			color: white
+			& + a
+				//margin-left: -20px
+			&:before
+				content: ""
+				display: inline-block
+				vertical-align: middle
+				height: 100%
+				width: 1px
+			&:hover svg.hexagonal polygon
+				fill: rgba($red, 1)
+				//+animation( outWaveIn .5s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards)
+				//stroke: $orange
+				//stroke-width: 0px
+				//stroke-dasharray: 10
+
+
+
+		span
+			font-size: 13px
+			display: inline-block
+			position: relative
+			z-index: 2
+			text-align: center
+			vertical-align: middle
+	svg.hexagonal
+		//fill: rgba(black, .6)
+		position: absolute
+		left: 0
+		top: 0
+		height: $svg-height
+		//overflow: hidden
+		z-index: 1
+		
+		
+		//stroke-dasharray: 20
+		
+		polygon
+			//stroke: rgba($red, .3)
+			//stroke-width: 3px
+			fill: rgba(black, .2)
+			+transition(all .5s)
+
+		//+animation(outWaveOut .5s cubic-bezier(0.42, 0.0, 0.58, 1.0) forwards)
+	.group-list2
+		+leader(2)
+		+trailer(4)
+		a
+			display: block
+			+adjust-font-size-to($font-size-m)
+			margin-top: -1px
+			border-bottom: 1px solid rgba($text-color, .3)
+			color: $text-color
+			+transition(border .3s, padding .3s)
+			&:hover, &.selected
+				border-left: 4px solid $text-color
+				padding-left: .5em 
+
+
+	
+	.group-wrap
+		//+container
+	.group-aside
+
+	
+	.group-content-wrap
+		+leader(2)
+		
+		+trailer(1)
+	.group-content
+		position: relative
+		padding: rhythm(1) $grid-padding
+		@extend %bg
+		+trailer(5)
+	.group-img
+		
+		height: $base-line-height*8
+		width: 150px
+		+trailer(1)
+		img
+			+border-radius(5px)
+			background-color: white
+			max-width: 100%
+			max-height: 100%
+
+	.group-name
+		position: absolute
+		top: - rhythm(2,$font-size-xxl)
+		left: 0
+		+adjust-font-size-to($font-size-xxl)
+		color: $white
+	.group-links
+		a
+			display: inline-block
+			margin-right: .2em
+			color: $hot-color
+			+transition(color .3s, transform .3s)
+			+adjust-font-size-to($font-size-xl)
+			+transform(rotate(0))
+			&:hover
+				+transform(rotate(-10deg))
+				color: darken($hot-color, 25%)
+	.group-banner
+
+	.group-article
+	+at-breakpoint($pad)
+		.group-aside
+			position: relative
+			+span-columns(3,12)
+			+trailer(3)
+		.group-content-wrap
+			+span-columns(9 omega,12)
+		.group-img
+			margin: -2.5em $padding
+			float: right
+	+at-breakpoint($pc)
+		.group-list
+			position: absolute
+			
+			a
+				float: left
+				& + a
+					margin-top: - rhythm(2)
+				&:nth-child(2n)
+					float: right
+

@@ -1,0 +1,76 @@
+$speaker-class: love-☺
+// %speaker-content
+// 	+leader(3)
+// 	+pie-clearfix
+// 	img
+// 		display: block
+// 	section
+// 		display: inline-block
+// 		+box-sizing(border-box)
+// 		+at-breakpoint($pad)
+// 			padding: rhythm(1)
+// 			vertical-align: top
+// 			width: columns(6, 12)
+// 			+trailer(1)
+
+
+.#{$speaker-class}
+	margin-bottom: 1.5em
+	$padding-left: $column-width*3
+	.speaker-head
+		text-align: center
+		+adjust-font-size-to($font-size-xxl)
+		+trailer(1,$font-size-xxl)
+
+	.speaker-container
+		+pie-clearfix
+		//margin-left: columns(3, 12)
+		@extend %bg
+		padding-left: 1em
+		margin: 0 0 rhythm(1) 0
+		padding: rhythm(1) 1em
+		//+box-shadow(-1px -1px 0 $dark inset)
+		* :last-child
+			margin-bottom: 0
+		+at-breakpoint($pad)
+			padding: 0 1em rhythm(1) $padding-left
+			margin: 0 1em rhythm(1) $column-width
+
+	.speaker-img
+
+		width: 100%
+		float: none
+		margin-left: 0
+		height: rhythm(5)
+		img
+			width: auto
+			height: $base-line-height*5
+			display: block
+
+			
+		+at-breakpoint($pad)
+			width: auto
+			height: auto
+			margin-left: - ($padding-left + ($column-width / 2))
+			margin-right: 15px
+			float: left
+			+leader(1)
+			img
+				width: $padding-left
+				height: auto
+				
+
+	.speaker-name
+		+adjust-font-size-to($font-size-xl)
+		margin-top: -1px
+		border-bottom: 1px solid $white
+		color: $white
+		.sub
+			font-size: .8em
+			line-height: 1
+			margin-left: .5em
+
+	.title
+		+adjust-font-size-to($font-size-xl)
+
+	.description

@@ -2994,3 +2994,19 @@ Use "@extend %vg !optional" if the extend should be able to fail.
 2014-07-27 13:05:14 overwrite css/all.css.map 
 2014-07-27 13:05:47 overwrite css/all.css 
 2014-07-27 13:05:48 overwrite css/all.css.map 
+2014-07-27 14:37:19     error sass/all.sass (Line 94 of sass/_partial.sass: Invalid CSS after "margin-top:": expected pseudoclass or pseudoelement, was "-2em")
+2014-07-27 14:37:19 overwrite css/all.css 
+2014-07-27 14:37:35 overwrite css/all.css 
+2014-07-27 14:37:35 overwrite css/all.css.map 
+2014-08-05 22:49:59 overwrite css/all.css 
+2014-08-05 22:50:00 overwrite css/all.css.map 
+2014-08-05 22:58:07 overwrite css/all.css 
+2014-08-05 22:58:08 overwrite css/all.css.map 
+2014-08-05 22:58:43 overwrite css/all.css 
+2014-08-05 22:58:44 overwrite css/all.css.map 
+2014-08-05 23:11:32 overwrite css/all.css 
+2014-08-05 23:11:33 overwrite css/all.css.map 
+2014-08-05 23:14:10 overwrite css/all.css 
+2014-08-05 23:14:11 overwrite css/all.css.map 
+2014-08-05 23:14:45 identical css/all.css 
+2014-08-05 23:14:45 identical css/all.css.map 

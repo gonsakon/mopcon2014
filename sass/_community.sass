@@ -116,10 +116,13 @@ $group-class: kh-❤
 
 	.group-name
 		position: absolute
-		top: - rhythm(2,$font-size-xxl)
+		top: -2em
 		left: 0
-		+adjust-font-size-to($font-size-xxl)
+		+adjust-font-size-to($font-size-xl)
 		color: $white
+		+at-breakpoint($pad)
+			+adjust-font-size-to($font-size-xxl)
+			top: - rhythm(2,$font-size-xxl)
 	.group-links
 		a
 			display: inline-block

@@ -1,17 +1,14 @@
 
 html 
 	background: $color-bg
-	background: image-url("bg-2014.png") $color-bg
-	//background: url("http://hitcon.org/2014/images/bg-grid.png?1400914833")
-.container
-	overflow: hidden
-	//background: url(../images/bg.png)
-body
-	// background: url(../images/bg.png)
-	//overflow: hidden
+	background: image-url("bg.png") $color-bg
+
+html
+	overflow-x: hidden
+
 .container 
 	+container()
-
+	// overflow: hidden
 	margin: 0 auto
 	//+susy-grid-background()
 	+at-breakpoint($pad)
@@ -26,6 +23,17 @@ body
 		h1
 			display: none
 		img 
+
+.row	
+	+pie-clearfix
+	+span-columns(12)
+
+	+at-breakpoint($pad)
+		.col-6
+			+span-columns(6)
+			+nth-omega(2n)
+
+
 .content
 	+span-columns($total-columns omega)
 	+transition(all,.3s)

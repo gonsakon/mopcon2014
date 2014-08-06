@@ -1,11 +1,6 @@
 <article class="content index">
-    <div class="page-title">
-        <a class="showmenu">
-            <i class="icon-list22"></i>
-        </a>
-        <h1>MOPCON 2014</h1>
-    </div>
-    <div class="sns" style="margin-top:-2em; font-size:1.5em; line-height:2em;">
+    
+    <div class="sns" style="font-size:1.5em;">
         <a href="https://www.facebook.com/mopcon/" alt="MOPCON Facebook 粉絲團" title="MOPCON Facebook 粉絲團"><i class="icon-facebook32"></i></a>
         <a href="https://google.com/+MopconOrg" alt="MOPCON @ Google+" title="MOPCON @ Google+"><i class="icon-googleplus32"></i></a>
         <a href="https://twitter.com/mopcon" alt="MOPCON @ Twitter" title="MOPCON @ Twitter"><i class="icon-twitter22"></i></a>
@@ -20,79 +15,61 @@
         </div>
         <time>2014/10/25~2014/10/26</time>
     </div>
+
+
+
+
+
+    <div class="section bg-rotate row">
+
+        <div class="col-6">
+            <img src="<%= lorem_image("480x240") %>" />
+        </div>
+        <div class="col-6">
+            <article class="article">
+                <h2>方向</h2>
+                <p>今年議程以營運、開發、數位內容等三大行動應用實務議題為主軸，邀請到Ptt創辦人/Microsoft Research的杜奕瑾、iKala執行長程世嘉、遠傳電信投資子公司Hiiir副總Neil Lee等台灣業界中堅擔任講師，更有 AWS Markku Lepisto 及 Joe Ziegler 兩位外籍講者參與盛會。</p>
+            </article>
+        </div>
+
+    </div>
+
+
+    <div class="section bg-rotate row">
+
+        <div class="col-6">
+            <article class="article">
+                <h2>精神</h2>
+                <p>行動應用近年成為媒體追逐之寵兒，從電子商務、數位內容、商業服務、消費應用無不積極行動相關領域發展。MOPCON 專注於行動軟體開發 / 應用技術之專業研討會，也是南部最大社群研討會，希望藉由軟體技術社群的力量，推動南北業界技術實務經驗交流，關注行動應用趨勢，並以軟體科技從業人員出發，定調本年度精神意涵為 "I code, I spread, I connect"。</p>
+                <p>
+                MOPCON 2013開放報名後，四百五十張張門票在四個半小時被掠奪殆盡，刷新南台灣科技研討會報名最快紀錄！2013 年 10 月 26 ~ 27 日活動期間，現場參與人數高達近五百名，樹立南台灣科技研討會之新里程碑；同時 App便利屋、APPGuru、Punapp等媒體報導給予本屆活動正面評價，亦獲得聯合報、經濟日報、自立晚報、聯合新聞網主流媒體報導</p>
+            </article>
+        </div>
+        <div class="col-6">
+            <img src="<%= lorem_image("480x240") %>" />
+        </div>
+    </div>
+
+
+    <div class="section row">
+
+        <div class="col-6">
+            <img src="<%= lorem_image("480x240") %>" />
+        </div>
+
+        <div class="col-6">
+            <article class="article">
+                <h2>報名資訊</h2>
+                <p>• 時間：2013/10/26-27（六日兩天）</p>
+                <p>• 地點：高雄國際會議中心</p>
+                <p>• 主題：MOPCON (Mobile Open Platform Conference)2013 以 "I code, I spread, I connect" 作為主要精神意涵，議程從行動開發技術議程出發，引申到行動服務營運，更將涵蓋數位內容之行動應用發展。議程規劃以「開發、營運、數位內容」做為主軸，以真實運作的應用案例，向與會者做第一手的探討</p>
+            </article>
+        </div>
+        
+    </div>
+
+
+
+
 </article>
 <!-- <svg id="svg" class="mobile-only" width="250" height="220"></svg> -->
-<script>
-// 	window.onload = function (){
-// 	var s = Snap('#svg');
-// 	Snap.load('images/mopcon_svg.svg',function(m){
-// 		_outer = m.selectAll('.outer')
-// 		_m = m.selectAll('.m')
-// 		_text = m.selectAll('.text')
-// 		_all = m.selectAll('.all') 
-
-// 		_all.attr({fill: 'none', stroke: 'white'})
-// 		_outer.attr({opacity: "0"});
-// 		_m.attr({opacity: "0"});
-// 		_text.attr({opacity: "0"});
-// 		s.append(m);
-
-
-// 		var parts = [
-//                 ["outer", [0, 20]], 
-//                 ["m", [20, 0]], 
-//                 ["text", [0, -20]]
-//             ],
-//             i = 0,
-//             showTimer = null,
-//             hideTimer = null;
-
-//         for (i = 0; i < parts.length; i++) {
-//             var el = parts[i],
-//             element = s.select("." + el[0]);
-//             element.attr({
-//                 opacity: 0,
-//                 transform: "t" + el[1]
-//             });
-//             parts[i].push(element);
-//         }
-
-//         i = 0;
-
-//             function showEach() {
-//                 clearTimeout(hideTimer);
-//                 if (i >= parts.length) return;
-//                 parts[i][2].animate({ 
-//                     transform: "t0,0",
-//                     opacity: 1
-//                 }, 300, mina.easeout);
-//                 showTimer = setTimeout(showEach, 200);
-//                 i++;
-//                 if (i >= parts.length) i = parts.length-1;
-//             }
-
-//             function hideEach() {
-//                 clearTimeout(showTimer);
-//                 if (i < 0) return;
-//                 parts[i][2].animate({ 
-//                     transform: "t" + parts[i][1],
-//                     opacity: 0
-//                 }, 200, mina.easeout);
-//                 hideTimer = setTimeout(hideEach, 200);
-//                 i--;
-//                 if (i < 0) i = 0;
-//             }
-
-//             setTimeout(function () {
-//                 // s.attr({
-//                 //     display: "inline"
-//                 // });
-//                 showEach();
-//             }, 100);
-
-//            // s.hover(hideEach, showEach);
-// 	});
-// }
-
-
-</script>

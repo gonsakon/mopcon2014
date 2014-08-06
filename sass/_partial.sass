@@ -11,11 +11,11 @@
 	+trailer(2)
 .page-title:before, .footer-line
 	height: 24px
-	background: url("../images/line-element.png?1401507867") repeat-x
+	//background: url("../images/line-element.png?1401507867") repeat-x
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
 	.page-title:before, .footer-line
-		background: url("../images/line-element2x.png?1401508772") repeat-x
+		//background: url("../images/line-element2x.png?1401508772") repeat-x
 		-moz-background-size: auto 26px
 		-o-background-size: auto 26px
 		-webkit-background-size: auto 26px
@@ -46,12 +46,35 @@
 		color: #ffd74d
 		text-align: left
 
-.footer-line
-	-moz-transform: rotate(180deg)
-	-ms-transform: rotate(180deg)
-	-webkit-transform: rotate(180deg)
-	transform: rotate(180deg)
-	clear: both
+
+.section
+	position: relative
+	+trailer(10)
+
+.bg-rotate
+	&:before
+		content: ""
+		background-color: $color-bg
+		top: rhythm(-2)
+		bottom: rhythm(-2)
+		left: 0
+		right: 0
+		position: absolute
+		box-shadow: 0 0 0 1px $error-color
+		z-index: -1
+		+transform(rotate(-7deg) scaleX(10))
+.article
+	h2
+		padding-left: $gap
+		border-left: 1px solid $error-color
+		+adjust-font-size-to($font-size-xl)
+		+trailer(1)
+	p
+		padding-left: $gap
+		border-left: 1px solid rgba($error-color, $opacity-m)
+		+trailer(1)
+
+
 
 .showmenu
 	cursor: pointer

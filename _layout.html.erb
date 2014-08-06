@@ -23,21 +23,18 @@
 	<![endif]-->
 </head>
 <body>
-<div class="perspective">
+
 	<%= render :partial => "/Partials/header" %>
-	<div class="block"></div>
-	<div class="relative"><div class="absolute">
-	<div class="main">
-		<div class="container">
-			<!-- layout start -->
-			<%= yield %>
-			<!-- layout end -->
-			<div class="footer-line"></div>
-		</div>
+	
+	<div class="container">
+		<!-- layout start -->
+		<%= yield %>
+		<!-- layout end -->
+		<div class="footer-line"></div>
 	</div>
-	</div>
-	</div>
-</div>
+
+
+
 
 <a href="#" class="scroll-top">
 	<div class="icon-arrow-up42"></div>

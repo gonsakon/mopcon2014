@@ -49,9 +49,10 @@
 
 .section
 	position: relative
-	+trailer(10)
+	
 
 .bg-rotate
+	+trailer(10)
 	&:before
 		content: ""
 		background-color: $color-bg
@@ -63,56 +64,76 @@
 		box-shadow: 0 0 0 1px $error-color
 		z-index: -1
 		+transform(rotate(-7deg) scaleX(10))
-.article
-	h2
-		padding-left: $gap
-		border-left: 1px solid $error-color
-		+adjust-font-size-to($font-size-xl)
-		+trailer(1)
-	p
-		padding-left: $gap
-		border-left: 1px solid rgba($error-color, $opacity-m)
-		+trailer(1)
 
 
+//square menu
+$square-btn-size: 36px
+$square-btn-padding: 4px
+$square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 
-.showmenu
+.square-btn
+	display: block
+	width: $square-btn-size
+	height: $square-btn-size
+	position: relative
 	cursor: pointer
-	display: block 
-	position: absolute
-	top: 0
-	font-size: 1.5em
-	line-height: 1.5
-	//width: 50px
-	//margin: 0.5em 0 0 .5em
-	//height: $base-line-height * 2
-	//width: $base-font-size * 3
-	//+adjust-font-size-to($font-big)
-	//line-height: 1
+	+box-shadow(0 0 0 1px $main-color)
+	& > span
+		display: block
+		width: $square-btn-size - $square-btn-padding*2
+		height: 1px
+		background-color: $main-color
+		position: absolute
+		top: -1px
+		left: 0
+		right: 0
+		bottom: 0
+		margin: auto
 
-	&:hover .line , &:active .line 
-		+box-shadow(0px 0px 15px 0px #FFF)
-	.line 
-		height: 3px
-		width: 70%
-		margin: 3px auto 6px auto
-		background: $white
-	+at-breakpoint($pc)
-		display: none
-		
+.showmenu 
+	margin-top: ($base-line-height*2 - $square-btn-size)/2
+	& > span
+		+transition(all .3s )
+		&:nth-child(1)
+			+transform(translateY(-$square-btn-translate))
+		&:nth-child(2)
+			+transform(translateY($square-btn-translate))  
+	.menu-show &
+		span
+			top: $square-btn-translate
+			background-color: $alert-color
+			@for $i from 1 through 3
+				&:nth-child(#{$i})
+					+transform(rotate((0deg+($i - 1)*120)) translateY($square-btn-translate))
+
 .scroll-top
-	display: none
-	color: white
 	position: fixed
-	font-size: 44px
-	right: 16px
-	bottom: 16px
-	background-color: rgba(black, .7)
-	+border-radius(3px)
-	opacity: .4
-	+transition(opacity .3s)
-	&:hover
+	right: $gutter-width
+	bottom: $gutter-width
+
+.scroll-top-btn
+	+transition(all .3s )
+	& > span
+		top: $square-btn-translate
+		@for $i from 1 through 3
+			&:nth-child(#{$i})
+				+transform(rotate((0deg+($i - 1)*120)) translateY($square-btn-translate))
+	opacity: 0
+	+transform(scale(2))
+	pointer-events: none
+
+	&.active
 		opacity: 1
+		+transform(scale(1))
+		pointer-events: auto
+		
+//menu end
+
+.sns
+	//+leader(-1)
+	+adjust-font-size-to($font-size-xl)
+
+
 .sns a
 	display: inline-block
 	-moz-transition: color 0.3s, -moz-transform 0.3s

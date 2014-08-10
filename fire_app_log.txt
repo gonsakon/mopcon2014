@@ -3144,3 +3144,43 @@ Use "@extend %vg !optional" if the extend should be able to fail.
 2014-08-06 22:20:20 overwrite css/all.css 
 2014-08-06 22:20:33 overwrite css/all.css 
 2014-08-06 22:20:50 overwrite css/all.css 
+2014-08-10 12:27:22 overwrite css/all.css 
+2014-08-10 12:27:46 overwrite css/all.css 
+2014-08-10 12:29:03 overwrite css/all.css 
+2014-08-10 12:30:09 overwrite css/all.css 
+2014-08-10 12:31:04 identical css/all.css 
+2014-08-10 12:31:38 overwrite css/all.css 
+2014-08-10 12:33:20 identical css/all.css 
+2014-08-10 12:33:28 identical css/all.css 
+2014-08-10 12:33:49 identical css/all.css 
+2014-08-10 12:34:06 overwrite css/all.css 
+2014-08-10 12:34:53 overwrite css/all.css 
+2014-08-10 12:36:13 overwrite css/all.css 
+2014-08-10 12:36:35 overwrite css/all.css 
+2014-08-10 12:37:10 overwrite css/all.css 
+2014-08-10 12:38:00 overwrite css/all.css 
+2014-08-10 12:40:50     error sass/all.sass (Line 20 of sass/_page-index.sass: Undefined variable: "$bg-color".)
+2014-08-10 12:40:50 overwrite css/all.css 
+2014-08-10 12:41:17 overwrite css/all.css 
+2014-08-10 12:42:03     error sass/all.sass (Line 21 of sass/_page-index.sass: Undefined variable: "$gutter".)
+2014-08-10 12:42:03 overwrite css/all.css 
+2014-08-10 12:42:11 overwrite css/all.css 
+2014-08-10 12:43:00 overwrite css/all.css 
+2014-08-10 12:46:40 identical css/all.css 
+2014-08-10 12:53:42 overwrite css/all.css 
+2014-08-10 12:55:02 overwrite css/all.css 
+2014-08-10 12:56:52     error sass/all.sass (Line 39 of sass/_header.sass: Undefined variable: "$line-height".)
+2014-08-10 12:56:52 overwrite css/all.css 
+2014-08-10 12:57:00 overwrite css/all.css 
+2014-08-10 12:57:45 overwrite css/all.css 
+2014-08-10 12:58:02 overwrite css/all.css 
+2014-08-10 12:58:30 overwrite css/all.css 
+2014-08-10 13:00:49 overwrite css/all.css 
+2014-08-10 13:05:24 overwrite css/all.css 
+2014-08-10 13:08:48 overwrite css/all.css 
+2014-08-10 13:10:26 overwrite css/all.css 
+2014-08-10 13:11:33 overwrite css/all.css 
+2014-08-10 15:27:16 overwrite css/all.css 
+2014-08-10 15:27:40 overwrite css/all.css 
+2014-08-10 15:28:36 overwrite css/all.css 
+2014-08-10 15:28:45 overwrite css/all.css 

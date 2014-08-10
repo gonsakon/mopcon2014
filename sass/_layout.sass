@@ -24,15 +24,8 @@ html
 			display: none
 		img 
 
-.row	
-	+pie-clearfix
-	+span-columns(12)
-
-	+at-breakpoint($pad)
-		.col-6
-			+span-columns(6)
-			+nth-omega(2n)
-
++grid-system($wrap-padding: $gutter-width/2)
+//by Casper
 
 .content
 	+span-columns($total-columns omega)

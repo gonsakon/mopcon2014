@@ -35,7 +35,34 @@
   <script>
     function initialize()
     {
+	    	var styles = [
+	    {
+	        featureType: "all",
+	        stylers: [
+	          { saturation: 0 },
+	          {hue:"#FF6F4D"}
+	        ]
+	      },{
+	        featureType: "road.arterial",
+	        elementType: "geometry",
+	        stylers: [
+	          { hue: "#00ffee" },
+	          { saturation: 50 }
+	        ]
+	      },{
+	        featureType: "poi.business",
+	        elementType: "labels",
+	        stylers: [
+	          { visibility: "off" }
+	        ]
+	      }
+	     
+	  ];
+
       var icck = new google.maps.LatLng(22.626197, 120.285605);
+
+      var styledMap = new google.maps.StyledMapType(styles,{name: "Styled Map"});
+
 
       var mapOptions = {
               zoom: 15,
@@ -44,6 +71,10 @@
           };
       var ele = document.getElementById('map-canvas');
       var map = new google.maps.Map(ele, mapOptions);
+
+            map.mapTypes.set('map_style', styledMap);
+        map.setMapTypeId('map_style');
+
 
       new google.maps.Marker({
           'position': icck,

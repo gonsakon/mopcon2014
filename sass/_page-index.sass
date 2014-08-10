@@ -1,0 +1,25 @@
+
+.section
+	h2
+		padding-left: $gap
+		border-left: 1px solid $error-color
+		+adjust-font-size-to($font-size-xl)
+		+trailer(1)
+
+.article
+	padding-left: $gap
+	border-left: 1px solid rgba($error-color, $opacity-m)
+	p
+		+trailer(1)
+	p:last-child
+		+trailer(0)
+
+.section-img
+	+trailer(5)
+
+.section-info
+	border: 1px solid $error-color
+	background-color: $color-bg
+	padding: $gutter-width
+	box-shadow: 0 0 0 6px $color-bg inset, 0 0 0 7px rgba($error-color, $opacity-m) inset
+	

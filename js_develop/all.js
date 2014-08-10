@@ -44,15 +44,15 @@ $('.group-list a').on('click',function(e){
 })
 
 $(window).scroll(function () {
-        
+     
     if ($(window).scrollTop() > $('.page-title').offset().top) {
-        $('.scroll-top').show();
+        $('.scroll-top-btn').addClass('active');
     } else {
-        $('.scroll-top').hide();
+        $('.scroll-top-btn').removeClass('active');
     }
 
 });	
-$(".scroll-top").on('click',function () {
+$(".scroll-top-btn").on('click',function () {
         $("html,body").animate({
             scrollTop: 0
         }, 900);

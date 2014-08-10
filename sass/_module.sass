@@ -79,6 +79,37 @@
 		+trailer(1)
 
 
+=grid-system($wrap-width:100%,$wrap-padding: 15px)
+	.row
+		margin-left: - $wrap-padding
+		margin-right: - $wrap-padding
+		+pie-clearfix
+
+	@for $i from 1 through 12	
+		.col-#{$i}
+			@extend %grid-system-col
+			width: ($wrap-width*($i/12))
+			
+		.offset-#{$i}
+			@extend %grid-system-offset
+			margin-left: ($wrap-width*($i/12))
+
+	%grid-system-col
+		position: relative
+		min-height: 1px
+		padding-left: $wrap-padding
+		padding-right: $wrap-padding
+		float: left
+		+box-sizing(border-box)
+		zoom: 1
+
+		@media (max-width: 767px)
+			float: none
+			width: auto
+			+trailer(1)
+	%grid-system-offset
+		@media (max-width: 767px)
+			margin-left: 0
 
 // $icon-spacing: 1px
 // $icon-sprite-dimensions: true

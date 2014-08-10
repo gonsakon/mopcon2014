@@ -1,4 +1,26 @@
 
+%doblue-border-style
+	border: 1px solid $error-color
+	box-shadow: 0 0 0 6px $color-bg inset, 0 0 0 7px rgba($error-color, $opacity-m) inset
+%relative
+	position: relative
+	height: 100%
+	width: 100%
+%absolute
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+
+
+.index
+	.relative
+		@extend %relative
+		
+	.absolute
+		@extend %absolute
+		
 .section
 	h2
 		padding-left: $gap
@@ -18,8 +40,90 @@
 	+trailer(5)
 
 .section-info
-	border: 1px solid $error-color
+	@extend %doblue-border-style
 	background-color: $color-bg
 	padding: $gutter-width
-	box-shadow: 0 0 0 6px $color-bg inset, 0 0 0 7px rgba($error-color, $opacity-m) inset
+
+.section-info-img-wp
+	$this-location-size: 150px
+	position: relative
+	min-height: $base-line-height*16
+	height: 100% 
+	background-color: $dark-error-color
+	overflow: hidden
+	.info-bg
+		height: 100%
+		width: 100%
+		+replace-text-with-svg("section-tw-bg")
+	.info-location
+		width: $this-location-size
+		height: $this-location-size
+		border-radius: 50%
+		text-align: center
+		position: absolute
+		border: 1px solid $main-color
+		top: 80px
+		left: 95px
+		+background-image(radial-gradient(50% 50%, rgba($main-color,0.00) 40%, rgba($main-color,0.00) 60%, rgba($main-color, .6) 100%))
+
+		.info-location-bg
+			@extend %absolute
+			+animation(infinite-rotate linear 120s infinite)
+			border: 3px dashed $main-color
+			border-radius: 50%
+
+		& > div:before
+			content: ""
+			height: 100%
+			display: inline-block
+			vertical-align: middle
+		span
+			display: inline-block
+			vertical-align: middle
+			text-align: center
+
 	
+	
+
+.section-zs-river
+	$this-height: 16
+	$this-font-size: 3
+
+	+leader(-11)
+	+trailer(-2)
+	height: $base-line-height*$this-height
+	position: relative
+	z-index: -1
+	//display: table-row
+
+
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background: image-url("zhuoshui_river.png") center center no-repeat
+
+		+filter(invert(1))
+		opacity: $opacity-m
+	.river-row
+		position: absolute
+		left: 0
+		top: $base-line-height*$this-height/2
+		margin-top: -(rhythm($this-font-size)/2)
+		
+	span
+		@extend %doblue-border-style
+		background-color: $color-bg
+		display: inline-block
+		height: rhythm($this-font-size,$font-size-xl)
+		width: rhythm($this-font-size,$font-size-xl)
+		line-height: rhythm($this-font-size,$font-size-xl)
+		text-align: center
+		margin-left: $gutter-width
+		font-size: $font-size-xl
+		opacity: $opacity-m
+
+

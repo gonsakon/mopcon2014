@@ -49,6 +49,7 @@
 
 .section
 	position: relative
+	z-index: $section-index
 	
 
 .bg-rotate
@@ -58,12 +59,12 @@
 		background-color: $color-bg
 		top: rhythm(-2)
 		bottom: rhythm(-2)
-		left: 0
-		right: 0
+		left: -999px
+		right: -999px
 		position: absolute
 		box-shadow: 0 0 0 1px $error-color
 		z-index: -1
-		+transform(rotate(-7deg) scaleX(10))
+		+transform(rotate(-7deg))
 
 
 //square menu
@@ -77,6 +78,7 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 	height: $square-btn-size
 	position: relative
 	cursor: pointer
+	background-color: $color-bg
 	+box-shadow(0 0 0 1px $main-color)
 	& > span
 		display: block

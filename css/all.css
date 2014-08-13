@@ -816,6 +816,114 @@ a.btn-selected {
   line-height: 1.5em;
 }
 
+.main-menu {
+  text-align: right;
+  margin-top: -1px;
+  border-bottom: 1px solid #69ca62;
+  position: relative;
+  z-index: 100;
+}
+.main-menu ul {
+  max-height: 0;
+  overflow: hidden;
+  -moz-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  margin-top: 1px;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  right: 0;
+}
+.menu-show .main-menu ul {
+  max-height: 500px;
+}
+.main-menu ul li {
+  display: block;
+}
+.main-menu ul a {
+  color: #69ca62;
+  font-size: 1.25em;
+  line-height: 2.4em;
+  text-decoration: none;
+  display: block;
+  padding: 0 0.5em;
+  background-color: #0f222b;
+  border-bottom: 1px dashed rgba(105, 202, 98, 0.35);
+  position: relative;
+}
+.main-menu ul a:hover {
+  background-color: #69ca62;
+  color: white;
+}
+.main-menu ul a.active:before {
+  float: left;
+  content: "\25CB";
+}
+@media (min-width: 768px) {
+  .main-menu ul a:hover {
+    background-color: #0f222b;
+  }
+  .main-menu ul a.active:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #e1c03c;
+  }
+}
+@media (min-width: 768px) {
+  .main-menu ul {
+    max-height: 500px;
+    overflow: auto;
+    display: block;
+    position: relative;
+    top: 0;
+    margin-top: 0;
+  }
+  .main-menu ul li {
+    display: inline-block;
+  }
+  .main-menu ul a {
+    border: 0;
+    margin-left: 1em;
+  }
+  .main-menu ul a:hover {
+    color: #69ca62;
+    background-color: none;
+  }
+  .main-menu ul a.active:before {
+    content: "";
+  }
+}
+
+.mobile-menu {
+  *zoom: 1;
+}
+.mobile-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.mobile-menu .showmenu {
+  font-size: 2em;
+  line-height: 1.5em;
+  float: left;
+}
+.mobile-menu h1 {
+  float: right;
+  font-size: 1.25em;
+  line-height: 2.4em;
+}
+
+.footer {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 .section-info, .section-zs-river span {
   border: 1px solid #ff6f4d;
   box-shadow: 0 0 0 6px #0f222b inset, 0 0 0 7px rgba(255, 111, 77, 0.35) inset;
@@ -833,6 +941,50 @@ a.btn-selected {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.pc-banner {
+  padding: 1.5em 0 9em;
+}
+.pc-banner .index-logo {
+  background-image: url('/images/index-logo.png?1407916195');
+  background-image: none, url('/images/index-logo.svg?1407916195');
+  background-repeat: no-repeat;
+  height: 228px;
+  width: 255px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.index .iphone {
+  background-image: url('/images/index-section-iphone.png?1407902545');
+  background-image: none, url('/images/index-section-iphone.svg?1407915312');
+  background-repeat: no-repeat;
+  height: 237px;
+  width: 112px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  right: 15px;
+  bottom: -15px;
+}
+.index .ipad {
+  position: relative;
+  background-image: url('/images/index-section-ipad.png?1407902559');
+  background-image: none, url('/images/index-section-ipad.svg?1407902586');
+  background-repeat: no-repeat;
+  height: 291px;
+  width: 432px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  max-width: 100%;
 }
 
 .section h2 {
@@ -919,6 +1071,20 @@ a.btn-selected {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+}
+.section-info-img-wp .index-section-map-text {
+  background-image: url('/images/index-section-map-text.png?1407903891');
+  background-image: none, url('/images/index-section-map-text.svg?1407903891');
+  background-repeat: no-repeat;
+  height: 190px;
+  width: 263px;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .section-zs-river {
@@ -1231,14 +1397,14 @@ a.btn-selected {
 }
 @media (min-width: 768px) {
   .talk-☴ .area-1, .talk-☴ .area-2 {
-    width: 23.7288135593%;
+    width: 32.2033898305%;
     float: left;
     margin-right: 1.6949152542%;
   }
 }
 @media (min-width: 768px) {
   .talk-☴ .area-3 {
-    width: 23.7288135593%;
+    width: 32.2033898305%;
     float: right;
     margin-right: 0;
   }
@@ -1668,92 +1834,4 @@ a.btn-selected {
   .kh-❤ .group-list a:nth-child(2n) {
     float: right;
   }
-}
-
-.main-menu {
-  text-align: right;
-  margin-top: -1px;
-  border-bottom: 1px solid #69ca62;
-  position: relative;
-  z-index: 100;
-}
-.main-menu ul {
-  max-height: 0;
-  overflow: hidden;
-  -moz-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
-  -webkit-transition: max-height 0.3s;
-  transition: max-height 0.3s;
-  margin-top: 1px;
-  position: absolute;
-  top: 3em;
-  left: 0;
-  right: 0;
-}
-.menu-show .main-menu ul {
-  max-height: 500px;
-}
-.main-menu ul li {
-  display: block;
-}
-.main-menu ul a {
-  color: #69ca62;
-  font-size: 1.25em;
-  line-height: 2.4em;
-  text-decoration: none;
-  display: block;
-  padding: 0 0.5em;
-  background-color: #0f222b;
-  border-bottom: 1px dashed rgba(105, 202, 98, 0.35);
-}
-.main-menu ul a:hover {
-  background-color: #69ca62;
-  color: white;
-}
-.main-menu ul a.active:before {
-  float: left;
-  content: "\25CB";
-}
-@media (min-width: 768px) {
-  .main-menu ul {
-    max-height: 500px;
-    overflow: auto;
-    display: block;
-    position: relative;
-    top: 0;
-    margin-top: 0;
-  }
-  .main-menu ul li {
-    display: inline-block;
-  }
-  .main-menu ul a {
-    border: 0;
-    margin-left: 1em;
-  }
-  .main-menu ul a:hover {
-    color: #69ca62;
-    background-color: none;
-  }
-  .main-menu ul a.active:before {
-    content: "";
-  }
-}
-
-.mobile-menu {
-  *zoom: 1;
-}
-.mobile-menu:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.mobile-menu .showmenu {
-  font-size: 2em;
-  line-height: 1.5em;
-  float: left;
-}
-.mobile-menu h1 {
-  float: right;
-  font-size: 1.25em;
-  line-height: 2.4em;
 }

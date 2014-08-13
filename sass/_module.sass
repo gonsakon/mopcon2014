@@ -19,6 +19,14 @@
 	background-image: none, image-url("#{$image-name}.svg")
 	@include background-size(cover)
 
+=bg-svg($image-name) 
+	background-image: image-url("#{$image-name}.png")
+	background-image: none, image-url("#{$image-name}.svg")
+	background-repeat: no-repeat
+	height: image-height("#{$image-name}.png")
+	width: image-width("#{$image-name}.png")
+	@include background-size(contain)
+
 =triangle($size, $color, $align,$type:1)  
 	height: 0  
 	width: 0  

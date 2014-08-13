@@ -3294,3 +3294,83 @@ Use "@extend %vg !optional" if the extend should be able to fail.
 2014-08-10 16:47:10 overwrite css/all.css 
 2014-08-10 16:47:29 overwrite css/all.css 
 2014-08-10 16:47:43 overwrite css/all.css 
+2014-08-13 10:51:53 overwrite css/all.css 
+2014-08-13 10:52:35 identical css/all.css 
+2014-08-13 10:54:17 overwrite css/all.css 
+2014-08-13 10:56:48 overwrite css/all.css 
+2014-08-13 10:57:10 overwrite css/all.css 
+2014-08-13 11:52:13 overwrite css/all.css 
+2014-08-13 11:54:13 overwrite css/all.css 
+2014-08-13 11:57:07 overwrite css/all.css 
+2014-08-13 11:57:22 overwrite css/all.css 
+2014-08-13 11:58:17 overwrite css/all.css 
+2014-08-13 11:58:37 overwrite css/all.css 
+2014-08-13 11:58:48 overwrite css/all.css 
+2014-08-13 11:59:11 overwrite css/all.css 
+2014-08-13 11:59:31 overwrite css/all.css 
+2014-08-13 12:03:56 overwrite css/all.css 
+2014-08-13 12:05:09 overwrite css/all.css 
+2014-08-13 12:07:04 overwrite css/all.css 
+2014-08-13 12:08:00 overwrite css/all.css 
+2014-08-13 12:08:24 overwrite css/all.css 
+2014-08-13 12:22:34 overwrite css/all.css 
+2014-08-13 12:22:49 overwrite css/all.css 
+2014-08-13 12:24:03 overwrite css/all.css 
+2014-08-13 12:25:02 overwrite css/all.css 
+2014-08-13 15:30:56 overwrite css/all.css 
+2014-08-13 15:31:15 overwrite css/all.css 
+2014-08-13 15:31:34 overwrite css/all.css 
+2014-08-13 15:31:43 overwrite css/all.css 
+2014-08-13 15:33:04 overwrite css/all.css 
+2014-08-13 15:33:54 overwrite css/all.css 
+2014-08-13 15:34:03 overwrite css/all.css 
+2014-08-13 15:41:32     error sass/all.sass (Line 15: File to import not found or unreadable: news.
+Load paths:
+  /Users/oushimakoto/github/mopcon2014/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.0.alpha.19/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/susy-2.1.2/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-normalize-1.5/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.2/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  Compass::SpriteImporter
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets)
+2014-08-13 15:41:32 overwrite css/all.css 
+2014-08-13 15:42:10     error sass/all.sass (Line 14: File to import not found or unreadable: page-index.
+Load paths:
+  /Users/oushimakoto/github/mopcon2014/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.0.alpha.19/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/susy-2.1.2/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-normalize-1.5/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.2/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  Compass::SpriteImporter
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets)
+2014-08-13 15:42:10 overwrite css/all.css 
+2014-08-13 15:42:37 overwrite css/all.css 
+2014-08-13 15:43:27 identical css/all.css 
+2014-08-13 15:43:41     error sass/all.sass (Line 1 of sass/_partial.sass: File to import not found or unreadable: partial/button.
+Load paths:
+  /Users/oushimakoto/github/mopcon2014/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_1.0/compass-core-1.0.0.alpha.19/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/susy-2.1.2/sass
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-normalize-1.5/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-h5bp-0.1.2/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/compass-960-plugin-0.10.4/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  Compass::SpriteImporter
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets
+  /Applications/Fire2.app/Contents/Resources/lib/ruby/compass_extensions/bootstrap-sass-3.1.1.1/vendor/assets/stylesheets)
+2014-08-13 15:43:41 overwrite css/all.css 
+2014-08-13 15:45:08 overwrite css/all.css 
+2014-08-13 15:45:36 overwrite css/all.css 
+2014-08-13 15:47:30 overwrite css/all.css 
+2014-08-13 15:48:33 identical css/all.css 
+2014-08-13 15:52:15 overwrite css/all.css 
+2014-08-13 15:53:31 overwrite css/all.css 
+2014-08-13 15:53:51 overwrite css/all.css 
+2014-08-13 15:53:59 overwrite css/all.css 
+2014-08-13 16:01:07 overwrite css/all.css 
+2014-08-13 16:01:26 overwrite css/all.css 
+2014-08-13 16:14:05 overwrite css/all.css 

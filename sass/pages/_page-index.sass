@@ -13,6 +13,12 @@
 	bottom: 0
 	right: 0
 
+.pc-banner
+	padding: rhythm(1) 0 rhythm(6)
+	.index-logo
+		+bg-svg(index-logo)
+		margin: 0 auto
+
 
 .index
 	.relative
@@ -20,6 +26,19 @@
 		
 	.absolute
 		@extend %absolute
+
+	.iphone
+
+		+bg-svg(index-section-iphone)
+		position: absolute
+		right: 15px
+		bottom: -15px
+
+	.ipad
+		position: relative
+		+bg-svg(index-section-ipad)
+		max-width: 100%
+
 		
 .section
 	h2
@@ -81,6 +100,11 @@
 			display: inline-block
 			vertical-align: middle
 			text-align: center
+	.index-section-map-text
+		+bg-svg(index-section-map-text)
+		position: absolute
+		bottom: 0
+		left: 0
 
 	
 	

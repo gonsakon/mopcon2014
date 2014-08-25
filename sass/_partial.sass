@@ -134,6 +134,7 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 .sns
 	//+leader(-1)
 	+adjust-font-size-to($font-size-xl)
+	text-align: right
 
 
 .sns a
@@ -146,14 +147,15 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 	-ms-transform: rotate(0)
 	-webkit-transform: rotate(0)
 	transform: rotate(0deg)
-	color: #56CAB6
+	color: $error-color
+
 
 .sns a:hover
 	-moz-transform: rotate(-10deg)
 	-ms-transform: rotate(-10deg)
 	-webkit-transform: rotate(-10deg)
 	transform: rotate(-10deg)
-	color: #1d7c6b
+	color: darken($error-color, 10%)
 
 .pc-banner
 	display: none

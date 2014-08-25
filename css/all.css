@@ -165,7 +165,7 @@ img {
 
 html {
   background: #0f222b;
-  background: url('/images/bg.png?1407335760') #0f222b;
+  background: url('/images/bg.png?1407934908') #0f222b;
 }
 
 html, body {
@@ -764,6 +764,7 @@ a.btn-selected {
 .sns {
   font-size: 1.5em;
   line-height: 2em;
+  text-align: right;
 }
 
 .sns a {
@@ -776,7 +777,7 @@ a.btn-selected {
   -ms-transform: rotate(0);
   -webkit-transform: rotate(0);
   transform: rotate(0deg);
-  color: #56cab6;
+  color: #ff6f4d;
 }
 
 .sns a:hover {
@@ -784,7 +785,7 @@ a.btn-selected {
   -ms-transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
   transform: rotate(-10deg);
-  color: #1d7c6b;
+  color: #ff461a;
 }
 
 .pc-banner {
@@ -821,6 +822,7 @@ a.btn-selected {
   margin-top: -1px;
   border-bottom: 1px solid #69ca62;
   position: relative;
+  background-color: #0f222b;
   z-index: 100;
 }
 .main-menu ul {
@@ -944,7 +946,8 @@ a.btn-selected {
 }
 
 .pc-banner {
-  padding: 1.5em 0 9em;
+  padding: 0 0 3em;
+  min-height: 12em;
 }
 .pc-banner .index-logo {
   background-image: url('/images/index-logo.png?1407916195');
@@ -957,6 +960,62 @@ a.btn-selected {
   -webkit-background-size: contain;
   background-size: contain;
   margin: 0 auto;
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  -moz-transform: translateX(3em) translateY(3em);
+  -ms-transform: translateX(3em) translateY(3em);
+  -webkit-transform: translateX(3em) translateY(3em);
+  transform: translateX(3em) translateY(3em);
+}
+.pc-banner .container {
+  position: relative;
+}
+.pc-banner .sqare {
+  position: absolute;
+  width: 21em;
+  height: 21em;
+  background-color: #0f222b;
+  left: 0;
+  top: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid #ff6f4d;
+  -moz-transform: rotate(45deg) translateX(3em) translateY(-3em);
+  -ms-transform: rotate(45deg) translateX(3em) translateY(-3em);
+  -webkit-transform: rotate(45deg) translateX(3em) translateY(-3em);
+  transform: rotate(45deg) translateX(3em) translateY(-3em);
+  box-shadow: 0 0 0 5px #0f222b;
+}
+.pc-banner .slogan {
+  float: left;
+  padding-top: 12em;
+  width: 50%;
+  border-bottom: 1px solid #ff6f4d;
+}
+.pc-banner .slogan span {
+  display: block;
+  color: #ff6f4d;
+}
+.pc-banner .slogan .l-text {
+  font-size: 1.5em;
+  line-height: 2em;
+}
+.pc-banner .slogan .date-text {
+  font-size: 1.5em;
+}
+.pc-banner .slogan-right {
+  float: right;
+  width: 50%;
+  border-top: 1px solid #ff6f4d;
+  color: #ff6f4d;
+}
+.pc-banner .slogan-right span {
+  display: block;
+  text-align: right;
 }
 
 .index .iphone {

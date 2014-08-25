@@ -13,11 +13,73 @@
 	bottom: 0
 	right: 0
 
+
+
+
+
 .pc-banner
-	padding: rhythm(1) 0 rhythm(6)
+	padding: 0 0 rhythm(2)
+	min-height: rhythm(8)
 	.index-logo
 		+bg-svg(index-logo)
 		margin: 0 auto
+		z-index: $index-logo-zindex
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		margin: auto
+		+transform(translateX(rhythm(2)) translateY(rhythm(2))) 
+	.container
+		position: relative
+	.sqare
+		position: absolute
+		width: rhythm(14)
+		height: rhythm(14)
+		background-color: $color-bg
+		left: 0
+		top: 0
+		right: 0
+		margin: auto
+		border: 1px solid $error-color
+		+transform(rotate(45deg) translateX(rhythm(2)) translateY(rhythm(-2))) 
+		box-shadow: 0 0 0 5px $color-bg
+	.slogan
+		float: left
+		+padding-leader(8)
+		width: 50%
+		border-bottom: 1px solid  $error-color
+		span
+			display: block
+			color: $error-color
+		.l-text
+			+adjust-font-size-to($font-size-xl)
+		.date-text
+			font-size: 1.5em
+	.slogan-right
+		float: right
+		width: 50%
+		border-top: 1px solid  $error-color
+		color: $error-color
+		span
+			display: block
+			text-align: right
+	// .slogan
+	// 	position: absolute
+	// 	left: -999px
+	// 	right: -999px
+	// 	top: rhythm(8)
+	// 	padding: rhythm(1)
+	// 	z-index: $index-slogan-zindex
+
+	// 	.slogan-left, .slogan-right
+	// 		+adjust-font-size-to($font-size-xxl)
+	// 	.slogan-left
+	// 		float: left
+	// 	.slogan-right
+	// 		float: right
+	// &:hover .slogan
+	// 	background-color: rgba($error-color, $opacity-m)
 
 
 .index

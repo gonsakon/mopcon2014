@@ -1595,4 +1595,51 @@ a.btn-selected {
   transform: translateZ(-500px) translateX(0px) rotateY(15deg);
 }
 
+.anti-none {
+  display: none;
+}
+@media (min-width: 768px) {
+  .anti-none {
+    display: inline;
+  }
+}
+
+.anti-♻ p {
+  margin-bottom: 1.5em;
+}
+.anti-♻ h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #ffd74d;
+}
+.anti-♻ h3 {
+  font-size: 1.25em;
+  line-height: 1.2em;
+  margin-bottom: 0.75em;
+}
+.anti-♻ h4 {
+  font-weight: bold;
+}
+.anti-♻ ul {
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+}
+@media (min-width: 768px) {
+  .anti-♻ ul {
+    margin-left: 2.5em;
+  }
+}
+.anti-♻ li {
+  list-style: disc;
+}
+.anti-♻ .bottom-btn {
+  text-align: center;
+}
+.anti-♻ .bottom-btn a {
+  color: white;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  line-height: 2em;
+}
+
 /*# sourceMappingURL=all.css.map */

@@ -1,27 +1,77 @@
 .timeline
+	margin-top: $base-font-size * 2
 	margin-bottom: 3em
 .anti-☢
+	margin-bottom: $base-font-size
 	position: relative
-	+padding-trailer(1)
+	&:first-child
 	time
 		+box-sizing(border-box)
 		height: $base-line-height * 3
+		color: $error-color
 		width:  $base-line-height * 3
-		+border-radius(100%)
-		background: #fff 
 		float: left 
+		overflow: hidden
 		text-align: center 
-		color: $common-dark
 		padding-top: $base-font-size / 1.3
 		position: relative
 		font-size: $font-middle
+		&:after
+			content: ""
+			position: absolute
+			top: 4px
+			left: 4px
+			width: 62px
+			height: 62px
+			border: 1px solid rgba($error-color, $opacity-m)
+	
 		em 
 			font-size: $font-middle
+	.news-svg
+		position: absolute
+		top: 0
+		left: 0
+
+	.news-svg line
+		stroke-width: 2
+		stroke: $error-color
+		fill: none
+		stroke-dasharray: 72
+
+	.news-svg-top
+		+animation(top 1.5s linear infinite)
+	.news-svg-left
+		+animation(left 1.5s linear infinite)
+	.news-svg-bottom
+		+animation(bottom 1.5s linear infinite)
+	.news-svg-right
+		+animation(right 1.5s linear infinite)
+	+keyframes(top)
+		from
+			+translateX(0px)
+		to
+			+translateX(-144px)
+	+keyframes(left)
+		from
+			+translateY(72)
+		to
+			+translateY(216px)
+	+keyframes(bottom)
+		from
+			+translateX(0px)
+		to
+			+translateX(144px)
+	+keyframes(right)
+		from
+			+translateY(72px)
+		to
+			+translateY(-72px)
 	.news-content
 		margin-left: $base-line-height * 4 	
 		@extend %bg
 		padding: rhythm(1)
 		position: relative
+		border-right: 1px solid rgba($error-color, $opacity-m)
 		&:before
 			display: block
 			content: ''
@@ -42,11 +92,19 @@
 	&:before
 		content: ''
 		position: absolute
-		top: 0
+		top: 72px
 		bottom: 0
 		width: 10px
-		background: $white
-		left: $base-line-height * 1.3
-	
+		border-right: 1px dashed $error-color
+		left: $base-line-height * 1.1
+	&:after
+		content: ''
+		position: absolute
+		// top: 72px
+		bottom: - $base-font-size
+		height: 15px
+		width: 10px
+		border-right: 1px dashed $error-color
+		left: $base-line-height * 1.1
 	.news-label
 		word-break: break-all

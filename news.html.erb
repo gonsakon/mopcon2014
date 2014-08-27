@@ -1,13 +1,15 @@
 <article class="content timeline">
-	<div class="page-title">
-		<a class="showmenu">
-			<i class="icon-list22"></i>
-		</a>
-		<h1>公告</h1>
-	</div>
+<% (1..5).each do |n| %>
 	<section class="anti-☢">
 		<time>
-			<em>2014</em><br>08/05
+		<em>2014</em><br>08/05
+		<svg class="news-svg" width="72" height="72">
+          <line class="news-svg-top" x1="0" y1="0" x2="216" y2="0"/>
+          <line class="news-svg-left" x1="0" y1="72" x2="0" y2="-144"/>
+          <line class="news-svg-bottom" x1="72" y1="72" x2="-144" y2="72"/>
+          <line class="news-svg-right" x1="72" y1="0" x2="72" y2="216"/>
+     	 </svg>
+			
 		</time>
 		<div class="news-content">
 			<div class="news-label">
@@ -17,46 +19,5 @@
 			</div>
 		</div>
 	</section>
-	<section class="anti-☢">
-		<time>
-			<em>2014</em><br>06/01
-		</time>
-		<div class="news-content">
-			<div class="news-label">
-				<p>
-					微議程 (lightning talk) 跟其它的議程一樣，也是一樣站在講台上跟大家分享議題，不同的是演講時間只有5分鐘(包括投影機設置的時間)。 
-					<br /> 
-					微議程將會在最大的國際會議廳進行，屆時所有的會眾都將集中到這邊，您可以跟所有與會的會眾介紹、分享您的想法、技術，或是熱情。如果您也有些想法想來跟大家分享，我們相信這會是個刺激而且有趣的好機會。
-				</p>	
-				<p>有興趣的朋友請來信至 <a href="#">sponsor@mopcon.org</a>，歡迎來與大家一起同樂。 </p>
-			</div>
-		</div>
-	</section>
-	<section class="anti-☢">
-		<time>
-			<em>2014</em><br>05/26
-		</time>
-		<div class="news-content">
-			<div class="news-label">
-				<p>
-					我們在昨天愚人節時段公布 MOPCON 2014 將挺進千人研討會規模，遭到多方質疑是愚人節活動，為了表達籌備團隊的決心，今天我們要大聲宣布： <br />
-					MOPCON 2014 將是「堅持在濁水溪以南的千人社群研討會」！
-				</p>	
-			</div>
-		</div>
-	</section>
-	<section class="anti-☢">
-		<time>
-			<em>2013</em><br>07/31
-		</time>
-		<div class="news-content">
-			<h2>活動報名即將開始！</h2>
-			<div class="news-label">
-				<p>
-					MOPCON 2013 報名倒數一日，各位準備好了嗎？
-					請千萬別錯過 9/28 20:00 正式開始的 MOPCON 2013 報名活動。
-				</p>	
-			</div>
-		</div>
-	</section>
+<% end %>
 </article>

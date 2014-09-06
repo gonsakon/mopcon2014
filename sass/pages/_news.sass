@@ -39,33 +39,14 @@
 		stroke-dasharray: 72
 
 	.news-svg-top
-		+animation(top 1.5s linear infinite)
+		+animation(top 3s linear infinite)
 	.news-svg-left
-		+animation(left 1.5s linear infinite)
+		+animation(left 3s linear infinite)
 	.news-svg-bottom
-		+animation(bottom 1.5s linear infinite)
+		+animation(bottom 3s linear infinite)
 	.news-svg-right
-		+animation(right 1.5s linear infinite)
-	+keyframes(top)
-		from
-			+translateX(0px)
-		to
-			+translateX(-144px)
-	+keyframes(left)
-		from
-			+translateY(72)
-		to
-			+translateY(216px)
-	+keyframes(bottom)
-		from
-			+translateX(0px)
-		to
-			+translateX(144px)
-	+keyframes(right)
-		from
-			+translateY(72px)
-		to
-			+translateY(-72px)
+		+animation(right 3s linear infinite)
+	
 	.news-content
 		margin-left: $base-line-height * 4 	
 		@extend %bg
@@ -86,7 +67,7 @@
 			+at-breakpoint($pad)
 				+adjust-font-size-to($font-big)	
 		a 
-			color: $hot-color
+			//color: $hot-color
 		p 
 			+trailer(1)
 	&:before
@@ -108,3 +89,23 @@
 		left: $base-line-height * 1.1
 	.news-label
 		word-break: break-all
++keyframes(top)
+	from
+		+translateX(0px)
+	to
+		+translateX(-144px)
++keyframes(left)
+	from
+		+translateY(72px)
+	to
+		+translateY(216px)
++keyframes(bottom)
+	from
+		+translateX(0px)
+	to
+		+translateX(144px)
++keyframes(right)
+	from
+		+translateY(72px)
+	to
+		+translateY(-72px)

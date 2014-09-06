@@ -1,0 +1,29 @@
+.anti-none
+	display: none 
+	+at-breakpoint($pad)
+		display: inline
+.anti-♻
+	p
+		+trailer(1)
+	h2 
+		+adjust-font-size-to($font-size-xl)
+		color: $orange
+	h3
+		+adjust-font-size-to($font-size-l)
+		+trailer(.5)
+
+	h4 
+		font-weight: bold
+	ul 
+		+trailer(1)
+		margin-left: 1em
+		+at-breakpoint($pad)
+			margin-left: 2.5em
+	li 
+		list-style: disc
+	.bottom-btn
+		text-align: center
+		a 
+			color: #fff
+			margin-bottom: 1em
+			+adjust-font-size-to($font-size-xl)

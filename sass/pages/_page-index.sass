@@ -100,6 +100,13 @@
 		position: relative
 		+bg-svg(index-section-ipad)
 		max-width: 100%
+	.article
+		padding-left: $gap
+		border-left: 1px solid rgba($error-color, $opacity-m)
+		p
+			+trailer(1)
+		p:last-child
+			+trailer(0)
 
 		
 .section
@@ -109,13 +116,7 @@
 		+adjust-font-size-to($font-size-xl)
 		+trailer(1)
 
-.article
-	padding-left: $gap
-	border-left: 1px solid rgba($error-color, $opacity-m)
-	p
-		+trailer(1)
-	p:last-child
-		+trailer(0)
+
 
 .section-img
 	+trailer(5)

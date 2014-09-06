@@ -25,8 +25,8 @@
 	position: relative
 	font-size: 1.5em
 	line-height: 2em
-	color: #ffd74d
-	margin-bottom: 3em
+	color: $alert-color
+	//margin-bottom: 3em
 
 .page-title:before
 	content: ""
@@ -43,7 +43,7 @@
 	.page-title h1
 		margin: 0
 		background: none
-		color: #ffd74d
+		color: $alert-color
 		text-align: left
 
 
@@ -62,7 +62,7 @@
 		left: -999px
 		right: -999px
 		position: absolute
-		box-shadow: 0 0 0 1px $error-color
+		box-shadow: 0 0 0 1px $error-color, 0 0 0 5px $color-bg inset, 0 0 0 6px rgba($error-color, $opacity-m) inset
 		z-index: -1
 		+transform(rotate(-7deg))
 
@@ -112,6 +112,7 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 	position: fixed
 	right: $gutter-width
 	bottom: $gutter-width
+	z-index: $menu-zindex
 
 .scroll-top-btn
 	+transition(all .3s )

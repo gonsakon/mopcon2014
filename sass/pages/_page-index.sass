@@ -14,22 +14,34 @@
 	right: 0
 
 
-
-
+.index .page-title
+	display: none
 
 .pc-banner
+	//display: none
 	padding: 0 0 rhythm(2)
 	min-height: rhythm(8)
+	+at-breakpoint($pad)
+		display: block
+		margin-bottom: 1em
 	.index-logo
-		+bg-svg(index-logo)
+		
 		margin: 0 auto
-		z-index: $index-logo-zindex
-		position: absolute
-		left: 0
-		top: 0
-		right: 0
-		margin: auto
-		+transform(translateX(rhythm(2)) translateY(rhythm(2))) 
+		z-index: -1
+		+bg-svg(mopcon_mobile_logo)
+		+leader(1)
+		//opacity: .6
+		+at-breakpoint($pad)
+			+leader(0)
+			z-index: $index-logo-zindex
+			+bg-svg(index-logo)
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			margin: auto
+			+transform(translateX(rhythm(2)) translateY(rhythm(2))) 
+			
 	.container
 		position: relative
 	.sqare
@@ -44,11 +56,15 @@
 		border: 1px solid $error-color
 		+transform(rotate(45deg) translateX(rhythm(2)) translateY(rhythm(-2))) 
 		box-shadow: 0 0 0 5px $color-bg
+		display: none
+		+at-breakpoint($pad)
+			display: block
 	.slogan
 		float: left
-		+padding-leader(8)
-		width: 50%
+		+padding-leader(2)
+		width: 100%
 		border-bottom: 1px solid  $error-color
+		+trailer(2)
 		span
 			display: block
 			color: $error-color
@@ -56,7 +72,12 @@
 			+adjust-font-size-to($font-size-xl)
 		.date-text
 			font-size: 1.5em
+		+at-breakpoint($pad)
+			+padding-leader(8)
+			width: 50%
+			+trailer(0)
 	.slogan-right
+		display: none
 		float: right
 		width: 50%
 		border-top: 1px solid  $error-color
@@ -64,6 +85,8 @@
 		span
 			display: block
 			text-align: right
+		+at-breakpoint($pad)
+			display: block
 	// .slogan
 	// 	position: absolute
 	// 	left: -999px

@@ -135,7 +135,9 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 .sns
 	//+leader(-1)
 	+adjust-font-size-to($font-size-xl)
-	text-align: right
+	text-align: left
+	+at-breakpoint($pad)
+		text-align: right
 
 
 .sns a
@@ -158,11 +160,7 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 	transform: rotate(-10deg)
 	color: darken($error-color, 10%)
 
-.pc-banner
-	display: none
-	+at-breakpoint($pad)
-		display: block
-		margin-bottom: 1em
+
 .mobile-banner 
 	time
 		+adjust-font-size-to($font-size-xxl)
@@ -174,6 +172,12 @@ $square-btn-translate: ($square-btn-size/3) - $square-btn-padding
 		display: none
 .mobile-banner-img
 	+adjust-font-size-to(16px)
+	
+.mtm
+	+leader(1)
+.mbm
+	+trailer(1)
+
 	
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
 

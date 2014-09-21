@@ -90,21 +90,21 @@ a.btn-selected {
 }
 
 .btn-blue {
-	background-color: #52BFFD;
+	background-color: #52BFFD !important;
 	 /* this is a green */
 }
 .btn-green {
-		 background: rgb(28, 184, 65);
+		 background: rgb(28, 184, 65) !important;
 }
 
 .btn-pink {
-	background: #535E64; /* this is an orange */
+	background: #535E64 !important; /* this is an orange */
 }
 .btn-darkgreen{
-    background: #FD5259
+    background: #FD5259 !important;
 }
 .btn-red {
-    background: #FD5259
+    background: #FD5259 !important;
 }
 .btn-lg{
     padding: 10px 16px;
